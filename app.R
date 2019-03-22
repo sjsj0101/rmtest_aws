@@ -15,8 +15,8 @@ ui <- fluidPage(
     mainPanel(
       imageOutput("image"),
       textOutput("text")
-    )
-))
+    ))
+)
 
 server <- function(input, output) {
   output$image <- renderImage({
@@ -28,7 +28,8 @@ server <- function(input, output) {
         height = 400,
         alt = "s1e1"
       ))
-    } else if (input$season == 1 & input$episode == 2){
+    } 
+    else if (input$season == 1 & input$episode == 2){
       return(list(
         src = "www/s1e2.jpg",
         filetype = "image/jpeg",
