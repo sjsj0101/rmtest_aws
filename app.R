@@ -1,5 +1,6 @@
 library(shiny)
 
+
 ui <- fluidPage(
   titlePanel("It's ALIVE"),
   fluidRow(
