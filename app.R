@@ -1,7 +1,5 @@
 library(shiny)
 
-library(ggvis)
-
 ui <- fluidPage(
   titlePanel("It's ALIVE"),
   fluidRow(
