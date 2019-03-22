@@ -16,23 +16,9 @@ ui <- fluidPage(
     column(3,
            wellPanel(
              h4("Filter"),
-             sliderInput("reviews", "Minimum number of reviews on Rotten Tomatoes",
-                         10, 300, 80, step = 10),
-             sliderInput("year", "Year released", 1940, 2014, value = c(1970, 2014),
-                         sep = ""),
-             sliderInput("oscars", "Minimum number of Oscar wins (all categories)",
-                         0, 4, 0, step = 1),
-             sliderInput("boxoffice", "Dollars at Box Office (millions)",
-                         0, 800, c(0, 800), step = 1),
-             selectInput("genre", "Genre (a movie can have multiple genres)",
-                         c("All", "Action", "Adventure", "Animation", "Biography", "Comedy",
-                           "Crime", "Documentary", "Drama", "Family", "Fantasy", "History",
-                           "Horror", "Music", "Musical", "Mystery", "Romance", "Sci-Fi",
-                           "Short", "Sport", "Thriller", "War", "Western")
-             ),
-             textInput("director", "Director name contains (e.g., Miyazaki)"),
-             textInput("cast", "Cast names contains (e.g. Tom Hanks)")
-           ),
+             sliderInput("season", "season",
+                         1, 4, 1, step = 1),
+             sliderInput("episode", "episode", 1, 10, 1,step =1),
     column(9,
            ggvisOutput("plot1"),
            wellPanel(
@@ -42,7 +28,7 @@ ui <- fluidPage(
            )
     )
   )
-))
+)))
 
 server <- function(input, output) {}
 
